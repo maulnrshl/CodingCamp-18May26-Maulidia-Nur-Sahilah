@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Aesthetic Study Dashboard</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+</head>
+
+<body>
+
+  <!-- BACKGROUND BLUR -->
+  <div class="bg1"></div>
+  <div class="bg2"></div>
+
+  <div class="container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <div class="profile">
+
+        <h2>Study Girl ✨</h2>
+
+        <p>Stay focused & productive</p>
+
+      </div>
+
+      <div class="menu">
+
+        <button>🏠 Dashboard</button>
+
+        <button>📚 Study Notes</button>
+
+        <button>📝 My Tasks</button>
+
+        <button>🎧 Focus Mode</button>
+
+      </div>
+
+      <div class="music-card">
+        <h3>🎵 Lofi Music</h3>
+
+        <p>Relax and study peacefully</p>
+      </div>
+
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+      <!-- TOP CARD -->
+      <div class="top-card">
+
+        <div>
+
+          <h1 id="clock">00:00:00</h1>
+
+          <p id="date"></p>
+
+          <h2 id="greeting">Good Evening ✨</h2>
+
+        </div>
+
+        <div class="top-right">
+
+          <input
+            type="text"
+            id="username"
+            placeholder="Your name"
+          >
+
+          <button onclick="saveName()">
+            Save
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- GRID -->
+      <div class="dashboard-grid">
+
+        <!-- TODO -->
+        <div class="card">
+
+          <div class="card-title">
+            <h2>📝 To-Do List</h2>
+          </div>
+
+          <div class="todo-input">
+
+            <input
+              type="text"
+              id="taskInput"
+              placeholder="Add your task..."
+            >
+
+            <button onclick="addTask()">
+              Add
+            </button>
+
+          </div>
+
+          <ul id="taskList"></ul>
+
+        </div>
+
+        <!-- TIMER -->
+        <div class="card">
+
+          <div class="card-title">
+            <h2>⏳ Pomodoro Timer</h2>
+          </div>
+
+          <div class="timer-display" id="timer">
+            25:00
+          </div>
+
+          <div class="timer-buttons">
+
+            <button onclick="startTimer()">
+              Start
+            </button>
+
+            <button onclick="stopTimer()">
+              Stop
+            </button>
+
+            <button onclick="resetTimer()">
+              Reset
+            </button>
+
+          </div>
+
+        </div>
+
+        <!-- QUICK LINKS -->
+        <div class="card">
+
+          <div class="card-title">
+            <h2>🔗 Quick Links</h2>
+          </div>
+
+          <div class="link-input">
+
+            <input
+              type="text"
+              id="linkName"
+              placeholder="Website name"
+            >
+
+            <input
+              type="text"
+              id="linkURL"
+              placeholder="https://"
+            >
+
+            <button onclick="addLink()">
+              Add
+            </button>
+
+          </div>
+
+          <div class="links" id="linksContainer"></div>
+
+        </div>
+
+        <!-- QUOTE -->
+        <div class="card quote-card">
+
+          <h2>🌸 Daily Motivation</h2>
+
+          <p>
+            “Success doesn’t come from motivation.
+            It comes from consistency.”
+          </p>
+
+        </div>
+
+      </div>
+
+    </main>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
